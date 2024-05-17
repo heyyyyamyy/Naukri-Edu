@@ -138,3 +138,10 @@ body{
     height: 600px;
     background-size: cover;
 }
+
+#resume-sample{
+    background: url(resume\ sample.png);
+    height: 600px;
+    background-size: cover;
+
+}
