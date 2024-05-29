@@ -662,7 +662,18 @@ const course_list = [
     link: "Course_Description/course72.html", 
     addedToCart: false,
   },
+
+  {
+    id:72,
+    image:"img/72.jpg",
+    title: "Microsoft Office Specialist Master Certification (MOS)",
+
+    isSearchResult: false,
+    link: "Course_Description/course72.html", 
+    addedToCart: false,
+  },
    
+
 
 ];
 export default course_list;
