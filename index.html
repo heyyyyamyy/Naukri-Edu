@@ -9,7 +9,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         .testimonial {
@@ -34,8 +34,96 @@
             padding: 20px;
             border-radius: 10px;
         }
+
+        #home-round-div {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            background-color: black;
+            box-shadow: 0 4px 6px #555555;
+        }
+
+        #home-round-div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #hero-heading-size {
+            font-size: 62px;
+            color: white;
+        }
+
+        #text-size {
+            font-size: 55px;
+        }
+
+        #footer {
+            text-transform: none;
+        }
+
+        .hover-effect {
+            transition: transform 0.3s, background-color 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .hover-effect img {
+            transition: transform 0.3s;
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+
+        .hover-effect:hover img {
+            transform: scale(1.1);
+        }
+
+        .hover-effect h4,
+        .hover-effect h5 {
+            transition: color 0.3s;
+        }
+
+        .hover-effect:hover h4 {
+            color: #007bff;
+        }
+
+        .hover-effect:hover h5 {
+            color: #333;
+        }
+
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #007bff;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 576px) {
+            #cards-size {
+                height: auto;
+            }
+        }
     </style>
-    </style>
+
 </head>
 
 <body>
@@ -49,8 +137,8 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home
                             </a>
@@ -75,7 +163,7 @@
                             <a class="nav-link" href="proffesionalcertiicates.html">Professional Certifications
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="term.html">Terms and Conditions</a>
                         </li>
 
@@ -84,7 +172,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="samplecertificates.html">Sample Professional Certificates</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact us</a>
                         </li>
@@ -100,99 +188,210 @@
 
     </header>
 
-    <section class="container-fluid pt-4">
-        <div class="container">
+    <section class="container-fluid" id="bg-index-home">
+        <div class="container py-5">
             <div class="row">
-                <div class="col-12 col-xl-6 d-flex align-items-center pb-4">
-                    <div class="">
-                        <div>
-                            <h1><b>Find courses that are best <br> for your career</b></h1>
+                <div class="col-7 col-xl-7 col-sm-12" data-aos-delay="400" data-aos="fade-up">
+                    <h1 id="hero-heading-size" data-aos="fade-right"><b>
+                            Advance Your Career with
+                            Our Courses
+                        </b></h1>
+                    <h5 class="pt-3 text-white d-none d-md-block" data-aos="fade-left">
+                        Unlock your full potential with our wide range of professional courses.
+                        Gain the skills and knowledge to thrive in your career and beyond.
+                    </h5>
 
-                            <p style="color: gray;">Explore our extensive catalog featuring courses in a wide range of
-                                subjects including technology, business, arts, humanities, and more. Whether you're a
-                                seasoned professional looking to advance your career or an enthusiast eager to delve
-                                into a new hobby, we have something for everyone.</p>
-
-                            <p style="color: gray;">Learn from the best in the industry! Our courses are taught by
-                                experienced instructors who are passionate about sharing their knowledge and expertise.
-                                Benefit from their insights, guidance, and personalized feedback as you progress through
-                                your learning journey.</p>
-
-                            <p style="color: gray;">Put your skills to the test with hands-on projects and assessments
-                                designed to reinforce your learning and measure your progress. Gain practical experience
-                                and confidence as you tackle real-world challenges under the guidance of your
-                                instructors.</p>
-
-
-                        </div>
+                    <div class="pt-3">
+                        <button class="btn btn-primary mb-2 p-3" data-aos="zoom-in"><a
+                                style="color: white; text-decoration: none;" href="proffesionalcertiicates.html">Explore
+                                Our Certifications</a></button>
+                        <button class="btn btn-primary mb-2 p-3" data-aos="zoom-in" data-aos-delay="100"><a
+                                style="color: white; text-decoration: none;" href="contact.html">Contact Us</a></button>
                     </div>
 
                 </div>
-                <div class="col-12 col-xl-6">
-                    <img class="img-fluid image" src="naurki home.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container-fluid py-5" id="width-size">
+        <div class="container ">
+            <div class="row ">
+                <h1 id="text-size" class="mb-4">Learn from Industry Experts</h1>
+
+                <div class="col-12 col-xl-4 col-sm-12 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Experienced Instructors</h5>
+                        <h5 style="font-size: 25px;">Our courses are taught by knowledgeable professionals who are
+                            passionate about sharing their expertise. Benefit from their guidance and insights to
+                            accelerate your learning.</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 col-sm-12 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Practical Approach</h5>
+                        <h5 style="font-size: 25px;">Dive into hands-on projects and real-world assessments designed to
+                            reinforce your learning. Gain practical experience and confidence to apply your new skills.
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 col-sm-12 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Personalized Feedback</h5>
+                        <h5 style="font-size: 25px;">Receive personalized feedback and support from your instructors
+                            throughout your learning journey. Get the guidance you need to reach your full potential.
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container-fluid py-5" id="learning-bg">
+    <section class="container py-5">
+        <h1 class="" id="font-size2"><b>Courses for Every Interest</b></h1>
+
+        <div class="row  ">
+            <div class="col-12 col-xl-6 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">1</span> Technology
+                </h3>
+                <h5 class="pt-3">Explore the latest advancements in fields
+                    like programming, data analysis, and
+                    cybersecurity. Gain the skills to thrive in
+                    the tech industry.</h5>
+            </div>
+
+            <div class="col-12 col-xl-6 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">2</span> Business</h3>
+                <h5 class="pt-3">Develop essential business acumen in
+                    areas such as marketing, finance, and
+                    entrepreneurship. Become a strategic
+                    leader in your organization..</h5>
+            </div>
+
+            <div class="col-12 col-xl-6 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">3</span> Arts &
+                    Humanities</h3>
+                <h5 class="pt-3">Dive into subjects like creative writing, art
+                    history, and philosophy. Cultivate your
+                    intellectual curiosity and expand your
+                    horizons.</h5>
+            </div>
+
+
+            <div class="col-12 col-xl-6 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">4</span> And More
+                </h3>
+                <h5 class="pt-3">Explore a wide range of additional topics,
+                    from healthcare to sustainability, to
+                    broaden your knowledge and skills.</h5>
+            </div>
+
+
+
+
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class="container-fluid py-5 bg-dark text-white" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-xl-6">
-                    <h1 class="py-2">Learning &
-                        Development</h1>
-                    <p>
-                        In internet industry, the biggest threat is from daily disruptions and new innovations. Hence,
-                        we need to stay relevant & ahead of the competitors in the market and build a company which is
-                        in sync with the evolving technologies and emerging customer needs. </p>
+                <div class="col-12 col-xl-8" data-aos="fade-right">
+                    <h1 class="pb-3" data-aos="fade-down">Learning Tailored to Your Needs</h1>
+                    <h5 data-aos="fade-left" data-aos-delay="100">
+                        <i class="fa-solid fa-caret-down"></i> Flexible Learning Options
+                    </h5>
+                    <h5 data-aos="fade-left" data-aos-delay="200">
+                        <ul>
+                            <li>Explore a variety of flexible learning formats, including self-paced
+                                online courses, live virtual classes, and on-demand webinars. Choose
+                                the option that best fits your schedule and learning style.</li>
+                        </ul>
+                    </h5>
 
-                    <p>
-                        Considering this fast pace of organizational growth required, it is critical for our people to
-                        continuously scale up and take larger roles. They need to stay abreast and equipped with the
-                        latest knowledge and skills that are out there.
-                        We also believe that when we create a culture in which employees can continuously grow and
-                        develop them, both personally & professionally, it leads to greater employee engagement &
-                        productivity.
-                    </p>
+                    <h5 data-aos="fade-left" data-aos-delay="300">
+                        <i class="fa-solid fa-caret-down"></i> Personalized Support
+                    </h5>
+                    <h5 data-aos="fade-left" data-aos-delay="400">
+                        <ul>
+                            <li>Dedicated instructors and tutors to guide you through the</li>
+                            <li>learning process</li>
+                            <li>Opportunities for one-on-one mentorship and coaching</li>
+                            <li>Access to a community of learners and industry experts for peer-</li>
+                            <li>to-peer support</li>
+                        </ul>
+                    </h5>
 
-                    <p>
-                        With these objectives, we have a host of learning & development offerings at Info Edge which are
-                        centered around 70: 20: 10 mix
-                    </p>
-                    <p>
-                    <ul>
-                        <li>70% on-the-job training</li>
-                        <li>20% ongoing coaching and feedback</li>
-                        <li>10% through host of learning offerings</li>
-                    </ul>
-                    </p>
+                    <h5 data-aos="fade-left" data-aos-delay="500">
+                        <i class="fa-solid fa-caret-down"></i> Continuous Improvement
+                    </h5>
+                    <h5 data-aos="fade-left" data-aos-delay="600">
+                        <ul>
+                            <li>
+                                Receive ongoing feedback and assessments to measure your
+                                progress and identify areas for growth. Leverage our resources to
+                                ensure you're constantly expanding your skills and knowledge.
+                            </li>
+                        </ul>
+                    </h5>
                 </div>
 
-                <div class="col-12 col-xl-6">
-                    <img src="/Asset/learning.png" class="p-5 img-fluid" alt="">
+                <div class="col-12 col-xl-4" data-aos="fade-left">
+                    <img src="Asset/learning.png" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <Section class="container-fluid">
-        <div class="container">
-            <h1 class="d-flex justify-content-center py-2">Sample Certificates</h1>
-            <div class="row ">
-                <div class="col-12 col-xl-6">
-                    <img src="/Asset/PMP-Certificate-1_page-0001.jpg" class="img-fluid rounded" alt="">
+    <!-- AOS Initialization Script -->
+    <script>
+        AOS.init();
+    </script>
+
+
+    <section class="container-fluid py-5">
+        <div class="container ">
+            <h1><b>Unlock Your Potential </b></h1>
+            <div class="row pt-2 mx-md-5">
+                <div class="col-12 col-xl-3 hover-effect">
+
+                    <img class="border rounded-2 mb-3" src="CAREER SMALL.png" alt="">
+                    <h4>Career Advancement</h4>
+                    <h5>Develop the skills and expertise to take on new challenges and responsibilities, positioning you
+                        for growth and promotion within your organization.</h5>
                 </div>
-                <div class="col-12 col-xl-6 ">
-                    <img src="/Asset/PMP-Certificate-2_page-0001.jpg" class="img-fluid" alt="">
+                <div class="col-12 col-xl-3 hover-effect">
+                    <img class="border rounded-2 mb-3 " src="books.png" alt="">
+                    <h4>Continuous Learning</h4>
+                    <h5>Foster a lifelong love of learning and stay ahead of industry trends. Continuously expand your
+                        knowledge and capabilities to thrive in a dynamic job market.</h5>
                 </div>
-                <div class="d-flex justify-content-center py-4">
-                    <a href="samplecertificates.html">
-                        <button class="btn btn-dark">Load more</button>
-                    </a>
+                <div class="col-12 col-xl-3 hover-effect">
+                    <img class="border rounded-2 mb-3  " src="development.png" alt="">
+                    <h4>Personal Development</h4>
+                    <h5>Unlock your full potential and cultivate transferable skills that can be applied across various
+                        aspects of your life, both professional and personal.</h5>
+                </div>
+                <div class="col-12 col-xl-3 hover-effect">
+                    <img class="border rounded-2  mb-3" src="confidence.png" alt="">
+                    <h4>Increased Confidence</h4>
+                    <h5>Gain the knowledge and practical experience to approach your work with greater self-assurance
+                        and the ability to take on new challenges with ease.</h5>
                 </div>
             </div>
         </div>
-    </Section>
+    </section>
 
     <div id="testimonialSlider" class="carousel slide bg-dark py-5" data-ride="carousel">
         <div class="carousel-inner">
@@ -317,7 +516,7 @@
                 </div>
             </div>
 
-            
+
 
         </div>
         <a class="carousel-control-prev" href="#testimonialSlider" role="button" data-slide="prev">
@@ -331,37 +530,12 @@
     </div>
 
 
-    <section class="container-fluid py-2" id="marquee-bg">
-        <h1 class="text-center py-2" id="marque-h1"><b>Tied up Universities & College's</b></h1>
-        <marquee behavior="scroll" direction="left" scrollamount="20" class="py-5">
-            <img class="rounded-4 p-2" src="/Asset/Project-Management-Institute-PMI.png" width="300" height="200"
-                alt="" />
-            <img class="rounded-4 p-2" src="/Asset/cambridge.jpg" width="210" height="200" alt="" />
-            <img class="rounded-4 p-2" src="/Asset/oxford.png" width="220" height="200" alt="" />
-            <img class="rounded-4 p-2" src="/Asset/imperior.png" width="220" height="200" alt="" />
-            <img class="rounded-4 p-2" src="/Asset/haward uni.jpg" width="220" height="200" alt="" />
-            <img class="rounded-4 p-2" src="Asset/University_of_California_Logo.svg.png" width="270" height="200"
-                alt="" />
-            <img class="rounded-4 p-2" src="Asset/boston.png" width="270" height="200" alt="" />
-            <img class="rounded-4 p-2" src="Asset/university of london.png" width="270" height="200" alt="" />
-            <img class="rounded-4 p-2" src="Asset/hopkins.jpg" width="300" height="200" alt="" />
-            <img class="rounded-4 p-2" src="Asset/stanford-university.png" width="300" height="200" alt="" />
-
-
-
-
-
-
-
-
-        </marquee>
-    </section>
 
 
     <footer id="footer">
         <section class="container-fluid pb-5" id="footer-bg">
             <div class="container">
-                <div class="row pt-5 mx-md-5">
+                <div class="row pt-5 ">
                     <div class="col-12 col-xl-3">
                         <p>
                             Naukri learning
@@ -375,8 +549,10 @@
                         <p>Quick link</p>
                         <ul id="f-col-a">
                             <li><a href="contact.html">Contact</a></li>
+                            <li><a href="sample.html">Sample GST Invoice</a></li>
                             <li><a href="samplecertificates.html">Sample Certificates</a></li>
                             <li><a href="term.html">Terms and Conditions</a></li>
+
 
                         </ul>
                     </div>
@@ -408,7 +584,7 @@
 
     <footer class="container-fluid pt-4 bg-dark">
         <div class="container">
-            <div class="row mx-md-5 ">
+            <div class="row  ">
                 <div class="col-12 col-xl-12">
                     <p class="text-white text-center">© Copyrights 2023 @Naukri</p>
                 </div>
@@ -418,6 +594,12 @@
 
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

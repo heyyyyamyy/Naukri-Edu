@@ -1,151 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-#marque-h1{
-    font-family: 'Poppins', sans-serif;
-}
-body{
-    background-color: #FFFFFF;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-#Contact-color{
-    color: #555555;
+#marque-h1 {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #ffffff;
 }
 
-
-#Contact-bg-col{
-    background-color: #7CB9E8;
+#Contact-color {
+  color: #555555;
 }
 
-#contact-last i{
-    font-size: 30px;
+#Contact-bg-col {
+  background-color: #7cb9e8;
 }
 
-#con-bg{
-    background-color: #edf0f2;
+#contact-last i {
+  font-size: 30px;
 }
 
-
-#a-gst a{
-    text-decoration: none;
+#con-bg {
+  background-color: #edf0f2;
 }
 
-#learning-bg{
-    background-color: #7CB9E8;
-    color: white;
-    font-size: larger;
+#a-gst a {
+  text-decoration: none;
 }
 
-#footer-bg{
-    background-color: #555555;
-    color: white;
+#learning-bg {
+  background-color: #7cb9e8;
+  color: white;
+  font-size: larger;
 }
 
-#footer-bg a{
-    text-decoration: none;
-    color: white;
+#footer-bg {
+  background-color: #555555;
+  color: white;
 }
 
-#marquee-bg{
-    background-color: #D4F1F4;
+#footer-bg a {
+  text-decoration: none;
+  color: white;
+}
+
+#marquee-bg {
+  background-color: #d4f1f4;
 }
 
 #nav-cart {
-    position: relative;
+  position: relative;
 }
 
 #nav-cart::after {
-    content: attr(data-cart-count);
-    /* Set content to the value of the data-count attribute */
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    border: 2px solid white;
-    color: white;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  content: attr(data-cart-count);
+  /* Set content to the value of the data-count attribute */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  border: 2px solid white;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: 140px;
+  height: 49px;
+}
+
+#resume-bg {
+  background: url(resumewriting.jpg);
+  height: 700px;
+}
+
+#career-bg {
+  background: url(career\ image.jpg);
+  height: 700px;
+  background-size: cover;
+}
+
+#job-bg {
+  background: url(job\ search.jpg);
+  height: 700px;
+  background-size: cover;
+}
+
+#skills-bg {
+  background: url(skillsdev\ img.png);
+  height: 700px;
+  background-size: cover;
+}
+
+#bg-black-trans {
+  background-color: rgba(0, 0, 0, 0.485);
+  font-size: 60px;
+}
+
+#bg-black-trans2 {
+  background-color: rgba(0, 0, 0, 0.592);
+}
+
+#bg-resume-blue {
+  background-color: #7cb9e8;
+}
+
+#font-size {
+  font-size: 45px;
+}
+
+#bg-Personalized {
+  background-color: rgb(0, 0, 0);
+}
+
+#bg-round-div {
+  background-color: white;
+  border-radius: 10px;
+  height: 230px;
+}
+
+#interview-bg {
+  background: url(interview.jpg);
+  height: 600px;
+  background-size: cover;
+}
+
+#resume-sample {
+  background: url(resume\ sample.png);
+  height: 600px;
+  background-size: cover;
+}
+
+#sample-resume-bg {
+  background-color: rgba(128, 128, 128, 0.184);
+}
+
+#home-round-div {
+  background-color: #555555;
+  color: white;
+  height: 230px;
+  border-radius: 10px;
+}
+
+#bg-index-home {
+  background: url(woman-typing-writing-windows.jpg);
+  height: 700px;
+  background-size: cover;
+  
+  overflow-x: hidden;
+}
+
+#width-size {
+  background-color: #7cb9e8;
+}
+
+#cards-size {
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  height: 300px;
+}
+
+#cards-size {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+#cards-size:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#bg-gray {
+  background-color: #7cb9e82c;
 }
 
 
-.navbar-brand img{
-    width: 140px;
-    height: 49px;
-}
-
-
-#resume-bg{
-    background: url(resumewriting.jpg);
-    height: 700px;
-}
-
-#career-bg{
-    background: url(career\ image.jpg);
-    height: 700px;
-    background-size: cover;    
-}
-
-#job-bg{
-    background: url(job\ search.jpg);
-    height: 700px;
-    background-size: cover; 
-}
-
-
-#skills-bg{
-    background: url(skillsdev\ img.png);
-    height: 700px;
-    background-size: cover; 
-}
-
-
-#bg-black-trans{
-    background-color: rgba(0, 0, 0, 0.485);
-    font-size: 60px;
-}
-
-#bg-black-trans2{
-    background-color: rgba(0, 0, 0, 0.592);
-}
-
-#bg-resume-blue{
-    background-color: #7CB9E8;
-}
-
-
-#font-size{
-    font-size: 45px;
-}
-
-
-
-#bg-Personalized{
-    background-color: rgb(0, 0, 0);
-}
-
-#bg-round-div{
-    background-color: white;
-    border-radius: 10px;
-    height: 230px;
-}
-
-#interview-bg{
-    background: url(interview.jpg);
-    height: 600px;
-    background-size: cover;
-}
-
-#resume-sample{
-    background: url(resume\ sample.png);
-    height: 600px;
-    background-size: cover;
-
-}
-
-#sample-resume-bg{
-    background-color: rgba(128, 128, 128, 0.184);
-}

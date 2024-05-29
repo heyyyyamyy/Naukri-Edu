@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+        #image-side {
+            height: 220px;
+        }
+
+        .testimonial {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonial img {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .testimonial-logo {
+            width: 50px;
+            margin-top: 10px;
+        }
+
+        .testimonial-text {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #home-round-div {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            background-color: black;
+            box-shadow: 0 4px 6px #555555;
+        }
+
+        #home-round-div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #hero-heading-size {
+            font-size: 62px;
+            color: white;
+        }
+
+        #text-size {
+            font-size: 55px;
+        }
+
+        #footer{
+            text-transform: none;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light me-auto">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/naurki_logo-removebg-preview.png" alt=""></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown"> <!-- Added dropdown class to the list item -->
+                            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <!-- Dropdown menu content -->
+                                <a class="dropdown-item" href="resume.html">Resume Review and Optimization</a>
+                                <a class="dropdown-item" href="interview.html">Interview Preparation</a>
+                                <a class="dropdown-item" href="career.html">Career Counseling</a>
+                                <a class="dropdown-item" href="jobsearch.html">Job Assistance</a>
+                                <a class="dropdown-item" href="skillsdev.html">Skills Development</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="proffesionalcertiicates.html">Professional Certifications
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="term.html">Terms and Conditions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sample.html">Sample GST Invoice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="samplecertificates.html">Sample Professional Certificates</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+
+                        <li class="nav-item" id="nav-cart" data-cart-count="0">
+                            <a class="nav-link" href="checkout.html">Cart</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="container-fluid " id="bg-index-home">
+            <div class="container  py-5 ">
+                <div class="col-7 mx-md-5">
+                    <h1 id="hero-heading-size"><b>
+                            Advance Your Career with
+                            Our Courses
+                            </b</h1>
+                            <h5 class="pt-5">Unlock your full potential with our wide range of professional courses.
+                                Gain the skills and
+                                knowledge to thrive in your career and beyond.</h5>
+
+                            <button class="btn btn-primary p-3"><a style="color: white ; text-decoration: none;"
+                                    href="proffesionalcertiicates.html">Explore Our Certifications</a></button>
+                            <button class="btn btn-primary p-3"><a style="color: white ; text-decoration: none;"
+                                    href="contact.html">Contact Us</a></button>
+                </div>
+            </div>
+        
+
+    </section>
+
+    <section class="container-fluid py-5" id="width-size">
+        <div class="container">
+            <div class="row mx-md-5">
+                <h1 id="text-size" class="mb-4">Learn from Industry Experts</h1>
+
+                <div class="col-12 col-xl-4 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Experienced Instructors</h5>
+                        <h5 style="font-size: 25px;">Our courses are taught by knowledgeable professionals who are
+                            passionate about sharing their expertise. Benefit from their guidance and insights to
+                            accelerate your learning.</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Practical Approach</h5>
+                        <h5 style="font-size: 25px;">Dive into hands-on projects and real-world assessments designed to
+                            reinforce your learning. Gain practical experience and confidence to apply your new skills.
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 py-3">
+                    <div id="cards-size">
+                        <h5 style="font-size: 30px;">Personalized Feedback</h5>
+                        <h5 style="font-size: 25px;">Receive personalized feedback and support from your instructors
+                            throughout your learning journey. Get the guidance you need to reach your full potential.
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h1 class="text-center" id="font-size2"><b>Courses for Every Interest</b></h1>
+
+        <div class="row mx-md-5">
+            <div class="col-12 col-xl-4 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">1</span> Technology</h3>
+                <h5 class="pt-3">Explore the latest advancements in fields
+                    like programming, data analysis, and
+                    cybersecurity. Gain the skills to thrive in
+                    the tech industry.</h5>
+            </div>
+
+            <div class="col-12 col-xl-4 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">2</span> Business</h3>
+                <h5 class="pt-3">Develop essential business acumen in
+                    areas such as marketing, finance, and
+                    entrepreneurship. Become a strategic
+                    leader in your organization..</h5>
+            </div>
+
+            <div class="col-12 col-xl-4 pt-5">
+                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">3</span> Arts & Humanities</h3>
+                <h5 class="pt-3">Dive into subjects like creative writing, art
+                    history, and philosophy. Cultivate your
+                    intellectual curiosity and expand your
+                    horizons.</h5>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="col-12 col-xl-4 pt-5">
+                    <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">4</span> And More</h3>
+                    <h5 class="pt-3">Explore a wide range of additional topics,
+                        from healthcare to sustainability, to
+                        broaden your knowledge and skills.</h5>
+                </div>
+            </div>
+            
+
+            
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div id="testimonialSlider" class="carousel slide bg-dark py-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <h3 class="text-center py-2 text-white">Our Clients Testimonials</h3>
+            <div class="carousel-item active">
+                <div class="testimonial">
+                    <img src="/IMG-20240514-WA0011.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Ramesh</h3>
+                        <p>Naukri eLearning has transformed my career! The courses are comprehensive and easy to
+                            follow. <br>
+                            The flexible schedule allowed me to learn at my own pace. Highly recommend!"</p>
+                        <img src="/amazon.png" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="IMG-20240514-WA0012.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Usha</h3>
+                        <p>I am really thankful toNaukri learning for helping me get a job. The mentors are really
+                            friendly and helped me <br> whenever I faced a issue. After working on so many projects in
+                            the
+                            program, I was confident that I will get the offer.</p>
+                        <img src="salesforce.jpg" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="IMG-20240514-WA0013.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Abhimanyu</h3>
+                        <p>The interactive modules and practical assignments in Naukri eLearning kept me engaged and
+                            made learning fun. <br>
+                            I feel much more confident in my professional abilities now. </p>
+                        <img src="microsoft.jpg" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="IMG-20240514-WA0014.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Shivam</h3>
+                        <p>
+                            Naukri eLearning offers an impressive range of courses that cater to different career
+                            paths. <br>
+                            I appreciated the expert insights and real-world applications provided throughout the
+                            lessons.
+                        </p>
+                        <img src="makemytrip.jpg" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="raman.webp" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Raman</h3>
+                        <p>
+
+                            I was able to upskill quickly and efficiently with Naukri eLearning.The content is
+                            relevant
+                            and up-to-date, <br> and the instructors are top-notch. It was exactly what I needed to
+                            advance
+                            in my field.
+                        </p>
+                        <img src="accenture.png" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="mansi.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Manshi</h3>
+                        <p>
+                            The learning experience at Naukri eLearning is unparalleled. The courses are designed by
+                            industry experts, <br> and the knowledge I gained has already opened new job opportunities
+                            for
+                            me.
+                        </p>
+                        <img src="deloitee.png" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="vikas.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Vikas</h3>
+                        <p>
+                            I was skeptical about online learning, but Naukri eLearning exceeded my expectations. The
+                            content is engaging, <br> and the flexibility allowed me to balance my studies with my job
+                            seamlessly
+                        </p>
+                        <img src="hcl.png" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <img src="biswajeet.jpg" class="rounded-3" alt="Testimonial Image">
+                    <div class="testimonial-text">
+                        <h3>Biswajeet</h3>
+                        <p>
+                            Thanks to Naukri eLearning, I was able to transition to a new field. The practical exercises
+                            and real-world examples <br> provided me with the hands-on experience I needed to succeed
+                        </p>
+                        <img src="cybervance.jpg" alt="Placement Logo" class="testimonial-logo">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <a class="carousel-control-prev" href="#testimonialSlider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialSlider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+  
+    
+
+
+    <footer id="footer">
+        <section class="container-fluid pb-5" id="footer-bg">
+            <div class="container">
+                <div class="row pt-5 mx-md-5">
+                    <div class="col-12 col-xl-3">
+                        <p>
+                            Naukri learning
+                        </p>
+                        <p>
+                            Naukri Learning is an online platform that offers a wide range of professional courses to
+                            help individuals enhance their skills and stay competitive in the job market. </p>
+                    </div>
+
+                    <div class="col-12 col-xl-3">
+                        <p>Quick link</p>
+                        <ul id="f-col-a">
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="samplecertificates.html">Sample Certificates</a></li>
+                            <li><a href="term.html">Terms and Conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-xl-3">
+                        <p>Reach Us</p>
+                        <i class="fa-solid fa-house fa-lg"></i>
+                        <p class="">
+                        <p>Address :- Info Edge (India) Ltd 203, 2nd Floor, <br>North Block, Manipal Center, Front Wing,
+                            Dickenson Road, <br> Bengaluru,<br> Karnataka 560042</p>
+
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-xl-3 " id="f-col-a">
+                        <p>Contact Us</p>
+
+                        <a href=""><i class="fa-solid fa-phone fa-lg pe-4"></i>08040093830</a>
+                        <br>
+                        <a href=""> <i class="fa-solid fa-envelope fa-lg pe-4"></i> contact@naukriedu.org</a>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </footer>
+
+    <footer class="container-fluid pt-4 bg-dark">
+        <div class="container">
+            <div class="row mx-md-5 ">
+                <div class="col-12 col-xl-12">
+                    <p class="text-white text-center">© Copyrights 2023 @Naukri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="checkout.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var animatedElements = document.querySelectorAll('.animated-content');
+
+            function scrollHandler() {
+                animatedElements.forEach(function (element) {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('animated');
+                    }
+                });
+            }
+
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            window.addEventListener('scroll', scrollHandler);
+            scrollHandler();
+        });
+    </script>
+</body>
+
+</html>

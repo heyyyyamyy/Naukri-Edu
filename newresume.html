@@ -10,13 +10,188 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <style>
-        #image-side {
-            height: 220px;
-        }
+        .overlay {
+    background-image: linear-gradient(to right, rgba(90, 100, 232, 0.9), rgba(84, 96, 234, 0.9));
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    padding: 110px 0;
+}
 
-        /* .animated-content li {
-            font-size: large;
-        } */
+.section-bg {
+    background-size: cover;
+    position: relative;
+    background-position: left;
+    z-index: 0;
+    padding: 0;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.contact-form {
+    position: relative;
+    padding: 45px 0 45px 60px;
+}
+
+.contact-form::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 6px;
+    background: #ffffff26;
+    box-shadow: 10px 40px 40px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    width: 100vw;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+ 
+.contact-form input,
+.contact-form textarea {
+    border: 0;
+    background: transparent;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 27px;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: white;
+}
+
+.contact-form input {
+    margin-bottom: 30px;
+    height: 55px;
+}
+
+.contact-form input:hover,
+.contact-form input:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid transparent;
+    border-bottom-color: rgb(254, 132, 111);
+}
+
+.taso-btn {
+    background-color: #fff;
+    margin: 25px 0;
+    color: #214dcb;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.17);
+}
+
+.contact-info {
+    padding: 0 30px 0 0;
+}
+
+h2.contact-title {
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    color: #ececec;
+}
+
+ul.contact-info {
+    margin-top: 30px;
+}
+
+ul.contact-info li {
+    margin-bottom: 22px;
+    display: flex;
+    width: 100%;
+}
+
+ul.contact-info span {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.info-left {
+    width: 10%;
+}
+
+.info-left i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.info-right h4 {
+    color: #fff;
+    font-size: 18px;
+}
+
+.contact-page .info-left i {
+    color: #FE846F;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 30px;
+    font-size: 17px;
+    line-height: 28px;
+    border: 0;
+    border-radius: 10px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-big {
+    color: #fff;
+    box-shadow: 2px 5px 10px 0px rgba(45, 45, 45, 0.19);
+    background: #FE846F;
+    transition: 0.2s;
+    border: 2px solid #FE846F;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-form::before {
+        width: 100%;
+    }
+}
+
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,8 +208,8 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home
                             </a>
@@ -59,7 +234,7 @@
                             <a class="nav-link" href="proffesionalcertiicates.html">Professional Certifications
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="term.html">Terms and Conditions</a>
                         </li>
 
@@ -68,7 +243,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="samplecertificates.html">Sample Professional Certificates</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact us</a>
                         </li>
@@ -84,144 +259,92 @@
 
     </header>
   
-    <section class="container-fluid " id="interview-bg">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-12 col-xl-6 py-5 ">
-                <h1 id="bg-black-trans" class="text-white py-2 text-center">Ace Your Job Interviews</h1>
-                <h5 id="bg-black-trans2" class="text-white text-center">Get ready for your next job interview with our expert preparation services.</h5>
-            </div>
-        </div>
-    </section>
-
-    <section class="container-fluid py-5" id="bg-resume-blue">
+    <section class="section-bg" style="background-image: url(https://i.ibb.co/9p3Cnk9/slider-2.jpg);"
+    data-scroll-index="7">
+    <div class="overlay pt-100 pb-100 ">
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12">
-                    <h1 id="font-size" class="text-center"><b>Comprehensive Interview Preparation</b></h1>
-                </div>
-            </div>
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="contact-info">
 
-            <div class="row py-5 d-flex justify-content-center">
-                <div class="col-12 col-xl-4 pt-2">
-                    <div id="bg-round-div" class="p-3">
-                        <h5><b>Personalized Coaching</b></h5>
-                        <h5>Our one-on-one coaching sessions are tailored to your specific needs and the job you're applying for, ensuring you are well prepared and confident.</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-xl-4 pt-2">
-                    <div id="bg-round-div" class="p-3">
-                        <h5><b>Mock Interviews</b></h5>
-                        <h5>Practice makes perfect. We provide mock interviews that simulate real interview scenarios, helping you to perform your best.</h5>
-                    </div>
-                </div>
-
-                <div class="col-12 col-xl-4 pt-2">
-                    <div id="bg-round-div" class="p-3">
-                        <h5><b>Expert Feedback</b></h5>
-                        <h5>Receive constructive feedback from experienced professionals, so you know exactly what to improve and how to impress your potential employer.</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container py-5">
-        <h1 class="text-center" id="font-size2"><b>Master the Art of Interviewing</b></h1>
-
-        <div class="row">
-            <div class="col-12 col-xl-4 pt-5">
-                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">1</span> Behavioral Techniques</h3>
-                <h5 class="pt-3">Learn how to effectively respond to behavioral interview questions using the STAR method and other proven techniques.</h5>
-            </div>
-
-            <div class="col-12 col-xl-4 pt-5">
-                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">2</span> Industry Insights</h3>
-                <h5 class="pt-3">Gain insights into what top companies in your industry are looking for and how to align your answers to their expectations.</h5>
-            </div>
-
-            <div class="col-12 col-xl-4 pt-5">
-                <h3><span style="background-color: rgba(14, 68, 169, 0.527);" class="p-3 rounded">3</span> Confidence Building</h3>
-                <h5 class="pt-3">Develop the confidence to communicate your skills and experiences effectively, ensuring you leave a lasting impression.</h5>
-            </div>
-        </div>
-    </section>
-
-    <section class="container-fluid text-white" id="bg-Personalized">
-        <div class="container">
-            <h1 id="font-size2" class="text-white text-center pt-5"><b>Your Partner in Success</b></h1>
-            <div class="row d-flex justify-content-center">
-                <div class="col-12 col-xl-5 my-5 bg-dark rounded-5">
-                    <h1>Customized Support</h1>
-                    <h5>We provide personalized support tailored to your career goals, ensuring you are fully prepared for every step of the interview process.</h5>
-                </div>
-
-                <div class="col-12 col-xl-5 my-5 mx-xl-5 mx-sm-0 bg-dark rounded-5">
-                    <h1>Extensive Resources</h1>
-                    <h5>Access a wealth of resources, including interview guides, question banks, and tips from industry experts.</h5>
-                </div>
-
-                <div class="col-12 col-xl-5 my-5 bg-dark rounded-5">
-                    <h1>Targeted Preparation</h1>
-                    <h5>Our preparation services are targeted to your specific industry and job role, ensuring you have the relevant knowledge and skills.</h5>
-                </div>
-
-                <div class="col-12 col-xl-5 mx-xl-5 mx-sm-0 my-5 bg-dark rounded-5">
-                    <h1>Continuous Improvement</h1>
-                    <h5>Receive ongoing support and guidance to continually improve your interview skills and adapt to new challenges in your job search.</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container py-5">
-        <h1 id="font-size2" class="text-center"><b>Get Started with Our Interview Preparation Services</b></h1>
-
-        <h5><i class="fa-solid fa-check me-3"></i>Schedule your first coaching session today and take the first step towards acing your job interviews.</h5>
-        <h5><i class="fa-solid fa-check me-3"></i>Benefit from our comprehensive interview preparation package designed to cover all aspects of the interview process.</h5>
-        <h5><i class="fa-solid fa-check me-3"></i>Gain confidence, improve your skills, and make a lasting impression on potential employers.</h5>
-
-       <a href="proffesionalcertiicates.html"><button class="btn btn-primary btn-lg mt-4">Get Started Now</button></a> 
-    </section>
-    
-    <section class="container-fluid py-5" id="bg-resume-blue">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-12">
-                    <h3 id="font-size" class="text-center"> <b>Order Placement Steps:</b> </h3>
-
-                    <h5>To avail these services, you need to go through the Proposal Email which we’ll be sharing you
-                        after the call and we’ll guide you to place order of the services from our website:
-                        <a style="color: white;" href="www.naukriedu.org">www.naukriedu.org</a>
-                    </h5>
-
-                    <h6>
-                        <ul>
-                            <li>Firstly, visit our portal www.naukriedu.org</li>
-                            <li>On the Home page you’ll see option of services, click on the services option.</li>
-                            <li>Select the services you want to opt you need and add them to cart.</li>
-                            <li>Go to cart and fill necessary details (Name, Contact details, email) etc.</li>
-                            <li>Place the order and make the payment.</li>
-                            <li>Once we receive the payment, we’ll share the payment Invoice within 24 hours.</li>
-                            <li>If required, someone from our team will assist you further.</li>
+                        <h2 class="contact-title">Contact Info</h2>
+                        
+                        <ul class="contact-info">
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>08040093830, 08040093831</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>09038112679 (WhatsApp Support Only)</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-at"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>contact@naukriedu.org</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>Info Edge (India) Ltd 203, 2nd Floor, North Block, Manipal Center, Front
+                                        Wing, Dickenson Road, Bengaluru, Karnataka 560042</h4>
+                                </div>
+                            </li>
                         </ul>
-                    </h6>
-
+                    </div>
                 </div>
+                <div class="col-lg-6 d-flex  align-items-center">
+                    <div class="contact-form ">
+                        <!--Contact Form-->
+                        <form id='contact-form' method=''><input type='hidden' name='form-name'
+                                value='contactForm' />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="first-name"
+                                            placeholder="Enter Your Name *" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="email"
+                                            placeholder="Enter Your Email *" required="required">
+                                    </div>
+                                </div>
 
-                <div>
-                    <h5><b>REFUND POLICY:</b>
-                    </h5>
-
-                    <h6>Refund Policy: You are eligible for refund within 24 hours prior scheduling your sessions with
-                        Professional experts. In case, we have scheduled the session and aligned you with our experts
-                        then you are not eligible for Refund. </h6>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea rows="4" name="message" class="form-control" id="description"
+                                            placeholder="Enter Your Message *" required="required"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <!--contact button-->
+                                    <button class="btn-big btn btn-bg">
+                                        Send Us <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-    </section>
+    </div>
+</section>
 
     <footer id="footer">
         <section class="container-fluid pb-5" id="footer-bg">

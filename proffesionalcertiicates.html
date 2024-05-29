@@ -96,7 +96,7 @@
 							aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="collapse navbar-collapse" id="collapsibleNavId">
+						<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
 							<ul class="navbar-nav  mt-2 mt-lg-0">
 
 
@@ -124,17 +124,7 @@
 									<a class="nav-link" href="proffesionalcertiicates.html">Professional Certifications
 										</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="term.html">Terms and Conditions</a>
-								</li>
-								
-								<li class="nav-item">
-									<a class="nav-link" href="sample.html">Sample GST Invoice</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="samplecertificates.html">Sample Professional Certificates</a>
-								</li>
-								<li class="nav-item">
+								<!--  -->
 									<a class="nav-link" href="contact.html">Contact us</a>
 								</li>
 								
@@ -149,74 +139,62 @@
 				</nav>
 			</header>
 
-    <section class="container-fluid py-5" id="Contact-bg-col">
-        <div class="container ">
-            <div class="d-flex justify-content-center">
-                <h1 id="Contact-color">LIST OF PROFESSIONAL CERTIFICATES</h1>
-            </div>
-            <nav aria-label="breadcrumb ">
-                <ol class="breadcrumb d-flex justify-content-center">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">List of Professional Certificates</li>
-                </ol>
-            </nav>
-        </div>
-    </section>
-
-    <section class="container-fluid">
-        <div class="container"></div>
-    </section>
-
-    <section class="container-fluid py-5">
-        <div class="container">
-            <!-- Search Bar -->
+    <section class="container-fluid" id="bg-gray">
+        <section class="container-fluid pt-5">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="searchInput" placeholder="Search Courses" onchange="performSearch()">
-                            <button class="btn btn-primary" onclick="performSearch()">Search</button>
+                <!-- Search Bar -->
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-8">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control   rounded-5 " id="searchInput" placeholder="Search Courses" onchange="performSearch()">
+                                &nbsp;&nbsp; <button class="btn btn-dark px-4 rounded-5 " onclick="performSearch()">Search</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            </div>
-            <div id="searchResults"></div>
-
-
-<script>
-  function search(query) {
-      const results = courseList.filter(item => item.toLowerCase().includes(query.toLowerCase()));
-      return results;
-  }
-
-
-
-  function displayResults(results) {
-      const resultsContainer = document.getElementById("searchResults");
-      resultsContainer.innerHTML = ""; // Clear previous results
-      if (results.length === 0) {
-          resultsContainer.innerHTML = "No results found.";
-      } else {
-          const resultList = document.createElement("ul");
-          results.forEach(result => {
-              const listItem = document.createElement("li");
-              listItem.textContent = result;
-              resultList.appendChild(listItem);
-          });
-          resultsContainer.appendChild(resultList);
-      }
-  }
-</script>
-            <!-- End Search Bar -->
-<div class="container">
-            <div class="row" id="course-list-container">
                 
-                <!-- Your course list content -->
+                </div>
+                <div id="searchResults"></div>
+    
+    
+    <script>
+      function search(query) {
+          const results = courseList.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+          return results;
+      }
+    
+    
+    
+      function displayResults(results) {
+          const resultsContainer = document.getElementById("searchResults");
+          resultsContainer.innerHTML = ""; // Clear previous results
+          if (results.length === 0) {
+              resultsContainer.innerHTML = "No results found.";
+          } else {
+              const resultList = document.createElement("ul");
+              results.forEach(result => {
+                  const listItem = document.createElement("li");
+                  listItem.textContent = result;
+                  resultList.appendChild(listItem);
+              });
+              resultsContainer.appendChild(resultList);
+          }
+      }
+    </script>
+                <!-- End Search Bar -->
+    <div class="container py-5" >
+                <div class="row" id="course-list-container">
+                    
+                    <!-- Your course list content -->
+                </div>
             </div>
-        </div>
+        </section>
     </section>
+
+   
+
+    
 
     <!-- Footer logo box -->
     <div class="footer-logo-box">
@@ -237,9 +215,10 @@
                         <p>Quick link</p>
                         <ul id="f-col-a">
                             <li><a href="contact.html">Contact</a></li>
+                            <li><a href="sample.html">Sample GST Invoice</a></li>
+
                             <li><a href="samplecertificates.html">Sample Certificates</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="term.html">Terms and Conditions</a></li>
                         </ul>
                     </div>
                     <div class="col-12 col-xl-3">

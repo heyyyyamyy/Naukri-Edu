@@ -420,3 +420,5 @@ function updateCourseAmount() {
 
 main();
 window.updateslotvalue = updateslotvalue;
+
+
