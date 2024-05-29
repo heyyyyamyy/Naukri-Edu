@@ -663,13 +663,25 @@ const course_list = [
     addedToCart: false,
   },
 
+  
+
   {
-    id:72,
-    image:"img/72.jpg",
-    title: "Microsoft Office Specialist Master Certification (MOS)",
+    id:73,
+    image:"/ITIL.png",
+    title: "Information Technology Infrastructure Library (ITIL)",
 
     isSearchResult: false,
-    link: "Course_Description/course72.html", 
+    link: "Course_Description/course74.html", 
+    addedToCart: false,
+  },
+
+  {
+    id:74,
+    image:"/pmi acp.png",
+    title: "PMI-ACP – PMI Agile Certified Practitioner",
+
+    isSearchResult: false,
+    link: "Course_Description/course75.html", 
     addedToCart: false,
   },
    
