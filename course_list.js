@@ -662,7 +662,30 @@ const course_list = [
     link: "Course_Description/course72.html", 
     addedToCart: false,
   },
+
+  
+
+  {
+    id:73,
+    image:"/ITIL.png",
+    title: "Information Technology Infrastructure Library (ITIL)",
+
+    isSearchResult: false,
+    link: "Course_Description/course74.html", 
+    addedToCart: false,
+  },
+
+  {
+    id:74,
+    image:"/pmi acp.png",
+    title: "PMI-ACP – PMI Agile Certified Practitioner",
+
+    isSearchResult: false,
+    link: "Course_Description/course75.html", 
+    addedToCart: false,
+  },
    
+
 
 ];
 export default course_list;
