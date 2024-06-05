@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light me-auto">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/naurki_logo-removebg-preview.png" alt=""></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown"> <!-- Added dropdown class to the list item -->
+                            <a class="nav-link dropdown-toggle" id="servicesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <!-- Dropdown menu content -->
+                                <a class="dropdown-item" href="resume.html">Resume Review and Optimization</a>
+                                <a class="dropdown-item" href="interview.html">Interview Preparation</a>
+                                <a class="dropdown-item" href="career.html">Career Counseling</a>
+                                <a class="dropdown-item" href="jobsearch.html">Job Assistance</a>
+                                <a class="dropdown-item" href="skillsdev.html">Skills Development</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="proffesionalcertiicates.html">Professional Certifications
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="term.html">Terms and Conditions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sample.html">Sample GST Invoice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="samplecertificates.html">Sample Professional Certificates</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+
+                        <li class="nav-item" id="nav-cart" data-cart-count="0">
+                            <a class="nav-link" href="checkout.html">Cart</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container mt-5">
+        <h2>Order Form</h2>
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                <div class="invalid-feedback">
+                    Please enter your first name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                <div class="invalid-feedback">
+                    Please enter your last name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number</label>
+                <input type="tel" class="form-control" id="contactNumber" placeholder="Enter your contact number"
+                    pattern="[0-9]{10}" required>
+                <div class="invalid-feedback">
+                    Please enter a valid 10-digit contact number.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"
+                    required></textarea>
+                <div class="invalid-feedback">
+                    Please enter your address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="emailId">Email ID</label>
+                <input type="email" class="form-control" id="emailId" placeholder="Enter your email ID" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email ID.
+                </div>
+            </div>
+            <div class="form-group pl-3 py-4">
+                <div class="row h4">Course Fees : &#8377; 9099.3</div>
+                <div class="row h4">Councellor Fees : &#8377; 3899.7</div>
+                <div class="row h4">Total : &#8377; 7999</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+    </div>
+    <footer id="footer" class="bg-secondary mt-4 text-white">
+        <section class="container-fluid pb-5" id="footer-bg">
+            <div class="container">
+                <div class="row pt-5 mx-md-5">
+                    <div class="col-12 col-xl-3">
+                        <p>
+                            Naukri learning
+                        </p>
+                        <p>
+                            Naukri Learning is an online platform that offers a wide range of professional courses to
+                            help individuals enhance their skills and stay competitive in the job market. </p>
+                    </div>
+
+                    <div class="col-12 col-xl-3">
+                        <p>Quick link</p>
+                        <ul id="f-col-a">
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="sample.html">Sample GST Invoice</a></li>
+
+                            <li><a href="samplecertificates.html">Sample Certificates</a></li>
+                            <li><a href="term.html">Terms and Conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-xl-3">
+                        <p>Reach Us</p>
+                        <i class="fa-solid fa-house fa-lg"></i>
+                        <p class="">
+                        <p>Address :- Info Edge (India) Ltd 203, 2nd Floor, <br>North Block, Manipal Center, Front Wing,
+                            Dickenson Road, <br> Bengaluru,<br> Karnataka 560042</p>
+
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-xl-3 " id="f-col-a">
+                        <p>Contact Us</p>
+
+                        <a href=""><i class="fa-solid fa-phone fa-lg pe-4"></i>08040093830</a>
+                        <br>
+                        <a href=""> <i class="fa-solid fa-envelope fa-lg pe-4"></i> contact@naukriedu.org</a>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </footer>
+
+    <footer class="container-fluid pt-4 bg-dark">
+        <div class="container">
+            <div class="row mx-md-5 ">
+                <div class="col-12 col-xl-12">
+                    <p class="text-white text-center">© Copyrights 2023 @Naukri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS for validation and redirection -->
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('contactForm');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        window.location.href = 'https://razorpay.me/@pmiusprofessionalservices';
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>
